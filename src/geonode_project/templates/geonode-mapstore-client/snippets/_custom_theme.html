@@ -1,4 +1,9 @@
 {% extends "geonode-mapstore-client/snippets/custom_theme.html" %}
+<style>
+    {% block extra_css %}
+        {{ custom_theme.extra_css }}
+    {% endblock %}
+</style>
 {% block content %}
 <style>
     :root {
