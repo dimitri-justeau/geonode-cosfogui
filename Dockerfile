@@ -3,6 +3,9 @@ RUN mkdir -p /usr/src/project
 
 RUN apt-get update -y && apt-get install curl wget unzip gnupg2 locales -y
 
+# FIX CVE-2025-15467
+RUN apt-get update && apt-get install -y openssl
+
 RUN sed -i -e 's/# C.UTF-8 UTF-8/C.UTF-8 UTF-8/' /etc/locale.gen && \
     locale-gen
 ENV LC_ALL=C.UTF-8
