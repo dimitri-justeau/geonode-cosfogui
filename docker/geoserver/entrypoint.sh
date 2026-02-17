@@ -202,7 +202,7 @@ for template in in ${geoserver_datadir_template_dirs[*]}; do
 
       for f in $(find ${GEOSERVER_DATA_DIR}/geofence/ -type f -name "*.j2"); do
           echo -e "Evaluating template\n\tSource: $f\n\tDest: ${f%.j2}"
-          /usr/local/bin/j2 $f > ${f%.j2}
+          /usr/local/bin/jinjanate $f > ${f%.j2}
           rm -f $f
       done
 
