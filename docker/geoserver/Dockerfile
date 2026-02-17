@@ -1,5 +1,5 @@
-ARG IMAGE_VERSION=11.0.18-jdk25-temurin-noble
-ARG JAVA_HOME=/usr/local/openjdk-25
+ARG IMAGE_VERSION=11.0.18-jdk17-temurin-jammy
+ARG JAVA_HOME=/usr/local/openjdk-17
 FROM tomcat:$IMAGE_VERSION
 
 ARG GEOSERVER_VERSION=2.27.4
