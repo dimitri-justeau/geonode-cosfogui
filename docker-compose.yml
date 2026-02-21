@@ -120,6 +120,7 @@ services:
     volumes:
       - statics:/mnt/volumes/statics
       - geoserver-data-dir:/geoserver_data/data
+      - ../MOSAICS:/geoserver_data/data/MOSAICS
       - backup-restore:/backup_restore
       - data:/data
       - tmp:/tmp
