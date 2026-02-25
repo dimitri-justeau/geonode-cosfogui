@@ -33,14 +33,14 @@ else
 fi
 
 if [ -z "${HTTPS_HOST}" ]; then
-        HTTP_SCHEME="http"
+        #HTTP_SCHEME="http"
         if [ $HTTP_PORT = "80" ]; then
                 PUBLIC_HOST=${HTTP_HOST}
         else
                 PUBLIC_HOST="$HTTP_HOST:$HTTP_PORT"
         fi
 else
-        HTTP_SCHEME="https"
+        #HTTP_SCHEME="https"
         if [ $HTTPS_PORT = "443" ]; then
                 PUBLIC_HOST=${HTTPS_HOST}
         else
