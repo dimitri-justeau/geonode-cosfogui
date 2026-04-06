@@ -1,4 +1,5 @@
 {% extends "geonode_base.html" %}
+{% load static %}
 
 {% load i18n %}
 {% block title %} {% trans "Le projet COSFOGUI" %} — {{ block.super }} {% endblock %}
@@ -7,8 +8,66 @@
 <div class="page-header">
   <h2>{% trans "Le projet COSFOGUI" %}</h2>
 </div>
-<p>
-    {% trans "Page en cours de construction" %}
+<p class="content-par">
+    La République de Guinée est un pays d’Afrique de l’Ouest composé de quatre régions naturelles.
+    Sa diversité d’écorégions, son relief accidenté, ainsi que sa localisation dans une zone de transition entre
+    savanes arborées et forêts humides confèrent à la Guinée une flore riche, ainsi qu’une grande diversité
+    d’écosystèmes végétaux. Ces derniers ont cependant été largement dégradés par les activités anthropiques,
+    et sont aujourd’hui extrêmement menacés. Si près de 20 % du territoire de la République de Guinée fait partie
+    du point chaud de la biodiversité “Forêt guinéenne de l’Ouest africain”, d'après les dernières estimations
+    les forêts denses et non dégradées couvrent aujourd’hui à peine 3 % du territoire national, et leur surface
+    est en déclin. Il nous semble aujourd’hui urgent de s’intéresser à ces forêts menacées et sous-étudiée,
+    qui présentent un intérêt majeur pour la communauté scientifique internationale et constituent
+    un précieux patrimoine ainsi qu’un atout important pour l’atteinte des objectifs de développement durable
+    en Guinée.
 </p>
+<div class="image-container">
+    <img src="{% static 'img/guinea_figure.jpg' %}" alt="République de Guinée" class="image">
+</div>
+
+<p class="content-par">
+    La Jeune Équipe Associée à l'IRD (JEAI) COmpétences pour la Sauvegarde des FOrêts GUInéenes (COSFOGUI) est un
+    projet financé par l'Institut de Recherche pour le Développement (IRD), de 2026 à 2028 (3 ans) dans lequel
+    travaillent ensemble des scientifiques de l'Institut de Recherche en Environnement de Guinée (IREG), de l'IRD,
+    de Kew Gardens et de la Cité des Sciences et de l'Innovation de Guinée (CSIG). Le projet scientifique de COSFOGUI
+    est d’améliorer notre connaissance de la distribution spatiale passée et présente des forêts de Guinée,
+    et d'en extraire des connaissances utiles pour la conservation et la restauration des forêts en République
+    de Guinée. En effet, les forêts guinéenes sont extrêmement fragmentées et s’inscrivent dans une mosaïque
+    paysagère complexe qu’il nous est aujourd’hui difficile d’analyser finement. Par ailleurs, dans l’optique
+    d’atteindre l’objectif “30 par 30” de Kunming-Montreal (30 % d’aires protégées d’ici 2030) en République de
+    Guinée, il sera nécessaire d’inclure dans le réseau national d’aires protégées des zones dégradées qui ont la
+    capacité de se régénérer, de manière naturelle ou assistée. Une bonne identification de ces zones
+    nécessite :
+</p>
+<ol class="content-par">
+    <li>De disposer d’une cartographie forestière à haute résolution qui permettra d’identifier les forêts reliques et les corridors écologiques</li>
+    <li>De mieux cartographier la déforestation passée en Guinée, afin de distinguer les mosaïques de forêts-savanes naturelles de celles qui résultent de perturbations anthropiques</li>
+</ol>
+<p class="content-par">
+    Ces connaissances permettront de proposer des outils d'aide à la décision basés sur des données de haute qualité
+    qui permettront d'éclairer les politiques publiques en matière d’environnement et d’aménagement du territoire.
+</p>
+
+
+<style>
+    .content-par {
+        font-size: 13.5pt;
+        text-align: justify;
+        padding-bottom: 10px;
+    }
+    .image-container {
+        width: 100%;
+    }
+    .image {
+        padding: 10px 0;
+        margin: auto;
+        display: block;
+        max-width: 80%;
+    }
+    .gn-footer {
+        position: relative !important;
+        margin-top: 50px;
+    }
+</style>
 
 {% endblock %}
