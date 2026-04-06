@@ -1,4 +1,5 @@
 {% extends "geonode_base.html" %}
+{% load static %}
 
 {% load i18n %}
 {% block title %} {% trans "L'équipe COSFOGUI" %} — {{ block.super }} {% endblock %}
@@ -7,8 +8,118 @@
 <div class="page-header">
   <h2>{% trans "L'équipe COSFOGUI" %}</h2>
 </div>
-<p>
-    {% trans "Page en cours de construction" %}
+
+<p class="content-par">
+    L'équipe du projet COSFOGUI est une équipe interdisciplinaire qui réunit des scientifiques l'Institut de
+    Recherche en Environnement de Guinée (IREG), de l'IRD, de Kew Gardens et de la Cité des Sciences et de
+    l'Innovation de Guinée (CSIG).
 </p>
+
+
+<div class="grid">
+  <div class="people-cell">
+      <img src="{% static 'img/people/dr_magass.png' %}" alt="Dr. Sékou Magassouba" class="people">
+      <p class="people-name">Dr. Sékou Magassouba</p>
+      <p class="people-short">Coordinateur du projet - IREG</p>
+      <p class="people-keywords">Agronomie - Botanique</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/dr_bah.jpg' %}" alt="Dr. Mamadou Bhoyes Bah" class="people">
+      <p class="people-name">Dr. Mamadou Bhoyes Bah</p>
+      <p class="people-short">Directeur général de l'IREG</p>
+      <p class="people-keywords">Sciences de l'éducation</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/dr_cheek.jpg' %}" alt="Dr. Martin Cheek" class="people">
+      <p class="people-name">Dr. Martin Cheek</p>
+      <p class="people-short">Directeur de recherche - Kew</p>
+      <p class="people-keywords">Botanique - Taxonomie</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/c_couch.jpg' %}" alt="Charlotte Couch" class="people">
+      <p class="people-name">Charlotte Couch</p>
+      <p class="people-short">Ingénieure - Kew</p>
+      <p class="people-keywords">Botanique - Taxonomie</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/pr_banire.jpg' %}" alt="Pr. Abdoulaye Baniré Diallo" class="people">
+      <p class="people-name">Pr. Abdoulaye Baniré Diallo</p>
+      <p class="people-short">Coordinateur général de la CSIG</p>
+      <p class="people-keywords">Bioinformatique - IA</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/ald.png' %}" alt="Alpha Laho Diallo" class="people">
+      <p class="people-name">Alpha Laho Diallo</p>
+      <p class="people-short">Doctorant - IREG</p>
+      <p class="people-keywords">Géomatique - Télédétection</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/nid.png' %}" alt="Nènè Issa Diallo" class="people">
+      <p class="people-name">Nènè Issa Diallo</p>
+      <p class="people-short">Doctorante - IREG</p>
+      <p class="people-keywords">Sociologie - Géomatique</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/k_guilavogui.png' %}" alt="Kaman Guilavogui" class="people">
+      <p class="people-name">Kaman Guilavogui</p>
+      <p class="people-short">Doctorant - IREG</p>
+      <p class="people-keywords">Botanique</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/dr_kaba.jpg' %}" alt="Dr. Djibril Kaba" class="people">
+      <p class="people-name">Dr. Djibril Kaba</p>
+      <p class="people-short">Responsable IA - CSIG</p>
+      <p class="people-keywords">Science des données - IA</p>
+  </div>
+  <div class="people-cell">
+      <img src="{% static 'img/people/dja.jpg' %}" alt="Dimitri Justeau-Allaire" class="people">
+      <p class="people-name">Dr. Dimitri Justeau-Allaire</p>
+      <p class="people-short">Correspondant scientifique - IRD</p>
+      <p class="people-keywords">Écologie du paysage - Modélisation</p>
+  </div>
+</div>
+
+<style>
+    .content-par {
+        font-size: 13.5pt;
+        text-align: justify;
+        padding: 15px 0;
+    }
+    .people {
+        border-radius: 50%;
+        width: 200px;
+        display: block;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    .people-name {
+        text-align: center;
+        font-weight: bold;
+    }
+    .people-short {
+        text-align: center;
+    }
+    .people-keywords {
+        text-align: center;
+        font-style: italic;
+    }
+    .people-cell {
+        padding: 10px 0;
+    }
+    .grid {
+        padding: 20px 0;
+        font-size: 13.5pt;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .gn-footer {
+        position: relative !important;
+        margin-top: 20px;
+    }
+    #wrap {
+        margin-top: 10px;
+    }
+</style>
 
 {% endblock %}
